@@ -3,3 +3,9 @@
     padding: 0%;
     margin: 0%;
 }
+
+.nav{
+    witdh : 100%;
+    height : 70px;
+    background : black;
+}
