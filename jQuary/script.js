@@ -1,17 +1,20 @@
-// document.getElementById('login').addEventListener('click',function(){
-        //     document.querySelector('.black-bg').classList.add('.showModal')
-        // })
+$('#login').on('click', function(){
+    $('.black-bg').addClass('showModal');
+});
 
-        $('#login').on('click', function(){
-            $('.black-bg').addClass('showModal');
-        });
+$('#close').on('click', function(){
+    $('.black-bg').removeClass('showModal');
+});
 
-        $('#close').on('click', function(){
-            $('.black-bg').removeClass('showModal');
-        })
-
-        // if(조건){
-        //     조건이 참일 때 실행할 코드
-        // } else {
-        //     조건이 참이 아닐 때 실행할 코드
-        // }
+$('#send').on('click', function(e){
+    if (document.getElementById('email').value == ''){
+        alert('아이디를 입력해주세요.');
+        e.preventDefault();
+    } else if (document.getElementById('password').value == ''){
+        alert('비밀번호를 입력해주세요.');
+        e.preventDefault();
+    } else if(document.getElementById('password').value.length < 6){
+        alert('비밀번호를 6자 이상 입력해주세요');
+        e.preventDefault();
+    }
+});
